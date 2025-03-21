@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<HTML xmlns:th="http://www.thymeleaf.org"> 
+<Head>
+<link rel="stylesheet" type="text/css" href="/css/index.css">
+<title>Weather App</title>
+</Head>
+<body>
+
+<div>
+<form action="/weather" method="get">
+<label for="city">Enter City:</label>
+<input type="text" id="city" name="city" placeholder="Enter city" value=""/>
+<button type="submit">Get Weather</button>
+</form>
+</div>
+<h1>Weather in<span th:text="${city}">City</span> <span th:text="${country}">Country</span></h1>
+<p>Temperature: <span th:text="${temperature}">Temperature</span>C</p>
+<p>Humidity: <span th:text="${humidity}">Humidity</span>%</p> 
+
+</body>
+
+</HTML>
