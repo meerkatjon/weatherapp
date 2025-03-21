@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <title>Weather App</title>
+</head>
+<body>
+
+<!-- Error Handling 
+<div th:if="${error}">
+    <h1 th:text="${error}"></h1>
+</div> -->
+
+<!-- Weather Data Display -->
+<div>
+    <h1>Weather in <span th:text="${city}">City</span> <span th:text="${country}">Country</span></h1>
+    <p>Temperature: <span th:text="${temperature}">Temperature </span>&deg;C</p>
+    <p>Humidity: <span th:text="${humidity}">Humidity</span>%</p>
+    <!-- Uncomment below to show weather description -->
+    <!-- <p>Description: <span th:text="${weather.weather[0].description}"></span></p> -->
+    <div th:if="${error}">
+    <p><span th:text="${error}"></span>></p>
+	</div>
+    
+</div>
+
+</body>
+</html>
